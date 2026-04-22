@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- تحديد لغة الموقع إلى العربية وتحديد الاتجاه من اليمين إلى اليسار (RTL) -->
+<html lang="ar" dir="rtl">
+<head>
+    <!-- ترميز الحروف لدعم اللغة العربية بشكل صحيح -->
+    <meta charset="UTF-8">
+    
+    <!-- جعل الموقع متجاوباً (Responsive) مع جميع الأجهزة والهواتف الذكية -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- [ممارسات أمنية] إضافة سياسة أمان المحتوى (CSP) لمنع هجمات XSS وتحميل موارد غير مصرح بها -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;">
+    
+    <!-- [ممارسات أمنية] إجبار المتصفح على عدم تغيير نوع المحتوى (MIME Sniffing) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- [ممارسات أمنية] التوافق مع متصفحات إنترنت إكسبلورر وإيدج الحديثة -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- تغيير اسم الموقع إلى باريس -->
+    <title>مخبز باريس - أفضل الكعك المخصص</title>
+    
+    <!-- ربط ملف التنسيقات (CSS) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- استيراد خطوط جوجل العربية (Aref Ruqaa للعناوين، Cairo للنصوص العادية) -->
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- استيراد مكتبة الأيقونات (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- قسم الرأس وشريط التنقل (Header / Navbar) -->
+    <header>
+        <div class="container">
+            <!-- الشعار واسم المخبز -->
+            <a href="#" class="logo">
+                <i class="fa-solid fa-cake-candles"></i> باريس
+            </a>
+            
+            <!-- قائمة التنقل -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#products">المنتجات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                    <!-- أيقونة سلة المشتريات -->
+                    <li>
+                        <a href="#" class="cart-icon" id="cart-icon" aria-label="سلة المشتريات">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-badge" id="cart-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي الافتتاحي (Hero Section) -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <!-- النصوص التعريفية -->
+            <div class="hero-text">
+                <h1>أفضل مخبز<br><span>للكعك المخصص</span></h1>
+                <p>نحن نصنع كعكاً يدوياً بحب، باستخدام مكونات فاخرة، ولمسة من السحر. لأن أجمل لحظات الحياة تستحق أن يُحتفل بها بطريقة مميزة لا تُنسى.</p>
+                <a href="#products" class="btn primary-btn">استكشف الكعك</a>
+            </div>
+            
+            <!-- الصور والأشكال العائمة -->
+            <div class="hero-image">
+                <!-- شكل الخلفية المتعرج -->
+                <div class="blob-shape" style="width: 100%;"></div>
+                <!-- الصورة الرئيسية للكعكة -->
+                <img src="images/home-cake-1.png" alt="كعكة فراولة لذيذة">
+                
+                <!-- الأشكال العائمة للتزيين -->
+                <img src="images/sticker-1.svg" style="width: 10%;" class="floating-cake cake-1" alt="شريحة كعكة">
+                <img src="images/sticker-2.svg" style="width: 10%;"  class="floating-cake cake-2" alt="شريحة كعكة">
+                <img src="images/3.png" style="width: 10%;" class="floating-balloon balloon-1" alt="بالونات">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم "من نحن" (About Section) -->
+    <section id="about" class="about">
+        <div class="container about-content">
+            <!-- صورة الطهاة -->
+            <div class="about-image">
+                <div class="blob-shape-pink"></div>
+                <img src="images/about-img.png" alt="خبازون باريس">
+            </div>
+            <!-- نص تعريفي عن الشغف بالخبز -->
+            <div class="about-text">
+                <h2>شغفنا في<br>خبز الكعك</h2>
+                <p>نحن مخبز متخصص في الحلويات المنزلية، الكعك المخصص، البراونيز، ومجموعة واسعة من الحلويات الفاخرة. شغفنا بالخبز يتيح لنا خلق تجارب حلوة ومثالية للاحتفالات، والمناسبات الخاصة، أو ببساطة للاستمتاع بها في أي وقت تريده.</p>
+                <a href="#products" class="btn secondary-btn">عرض منتجاتنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات (Products Section) -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">منتجاتنا</h2>
+            
+            <!-- أزرار تصفية المنتجات -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="strawberry">فراولة</button>
+                <button class="filter-btn" data-filter="vanilla">فانيليا</button>
+                <button class="filter-btn" data-filter="chocolate">شوكولاتة</button>
+                <button class="filter-btn" data-filter="dried-fruit">فواكه مجففة</button>
+                <button class="filter-btn" data-filter="others">أخرى</button>
+            </div>
+
+            <!-- شبكة عرض المنتجات الديناميكية (سيتم ملؤها عبر JavaScript) -->
+            <div class="product-grid" id="product-grid">
+                <!-- المنتجات ستظهر هنا بشكل أفقي -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التذييل والاتصال (Footer Section) -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <!-- الخريطة التوضيحية -->
+            <div class="footer-map">
+                <!-- صورة بديلة لخريطة تفاعلية لتقليل الحمل والتأكد من الأمان -->
+                <img src="images/1.png" alt="خريطة الموقع" style="width:100%; height:320px; object-fit:cover; border-radius: 10px;">
+            </div>
+            
+            <!-- معلومات الاتصال -->
+            <div class="footer-info">
+                <h2>اطلب كعكتك<br>المخصصة الآن!</h2>
+                
+                <div class="info-grid">
+                    <!-- العنوان -->
+                    <div class="info-item">
+                        <h4>الموقع:</h4>
+                        <p>اليمن<br>صنعاء</p>
+                    </div>
+                    <!-- الهاتف -->
+                    <div class="info-item">
+                        <h4>اتصل بنا:</h4>
+                        <!-- [ممارسات أمنية] استخدام روابط آمنة وتحديد الاتجاه -->
+                        <p dir="ltr" style="text-align: right;">+967 782 807 337<br>+967 7720 62 777</p>
+                    </div>
+                    <!-- أوقات العمل -->
+                    <div class="info-item">
+                        <h4>أوقات العمل:</h4>
+                        <p>السبت - الخميس: 9 صباحاً - 10 مساءً<br>الجمعة: 4 عصراً - 11 مساءً</p>
+                    </div>
+                    <!-- التواصل الاجتماعي -->
+                    <div class="info-item">
+                        <h4>راسلنا:</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="واتساب" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" aria-label="انستغرام" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="البريد الإلكتروني" rel="noopener noreferrer"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- الحقوق المحفوظة -->
+        <div class="footer-bottom">
+            <p>&copy; جميع الحقوق محفوظة لمخبز باريس 2026</p>
+            <div class="bottom-socials">
+                <a href="#" aria-label="فيسبوك" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="انستغرام" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="تويتر" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- حاوية سلة المشتريات (Cart Sidebar) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة المشتريات</h3>
+            <button class="close-cart" id="close-cart" aria-label="إغلاق السلة"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- سيتم إضافة العناصر هنا عبر الجافاسكريبت -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع:</span>
+                <span id="cart-total-price">0.00 ريال</span>
+            </div>
+            <button class="btn primary-btn checkout-btn">إتمام الطلب</button>
+        </div>
+    </div>
+
+    <!-- ربط ملف الجافاسكريبت -->
+    <script src="script.js"></script>
+</body>
+</html>
